@@ -22,11 +22,11 @@
       top: 50%;
       transform: translate(-50%, -50%);
       z-index: 0;
-      width: 55vw;
-      max-width: 410px;
-      min-width: 210px;
-      opacity: 0.12;
-      filter: blur(2.5px) grayscale(20%);
+      width: 62vw;
+      max-width: 470px;
+      min-width: 220px;
+      opacity: 0.20; /* tăng độ rõ nét lên */
+      filter: blur(1.1px) grayscale(8%); /* giảm blur, giảm grayscale */
       pointer-events: none;
       user-select: none;
     }
@@ -153,7 +153,7 @@
       .center-title-vi, .center-title-en{font-size:0.95rem;}
       .rating-title{font-size:1.1rem;}
       .star{font-size:34px;}
-      .bg-logo{width:80vw;max-width:370px;}
+      .bg-logo{width:85vw;max-width:380px;}
     }
   </style>
 </head>
@@ -184,7 +184,7 @@
 
 <script>
 const scriptURL = 'https://script.google.com/macros/s/AKfycbwNi5t08gZzKPmZRMUGwgFtkHN4WjsaaLXsFankTSVWExJ7hHZ1Ql1b4R-Rl0oKNCe_/exec';
-const quay = 'Quầy 1'; // Chỉ để gửi về database, không hiển thị
+const quay = 'Quầy 1';
 let rating = 0;
 function setRating(stars) {
   rating = stars;
@@ -220,6 +220,9 @@ function submitRating() {
 }
 function closeTab() {
   window.close();
+  setTimeout(function() {
+    document.body.innerHTML = '<div style="text-align:center;padding:70px 24px;font-size:1.25rem;">Quý khách vui lòng bấm nút X hoặc phím home để thoát khỏi trang này.<br><br>Cảm ơn quý khách đã đánh giá!</div>';
+  }, 200);
 }
 </script>
 
