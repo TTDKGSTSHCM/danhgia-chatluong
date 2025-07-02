@@ -184,6 +184,7 @@
 
 <script>
 const scriptURL = 'https://script.google.com/macros/s/AKfycbwNi5t08gZzKPmZRMUGwgFtkHN4WjsaaLXsFankTSVWExJ7hHZ1Ql1b4R-Rl0oKNCe_/exec';
+const quay = 'Quầy 1'; // Chỉ để gửi về database, không hiển thị
 let rating = 0;
 function setRating(stars) {
   rating = stars;
@@ -197,7 +198,7 @@ function submitRating() {
     return;
   }
   const note = document.getElementById('note').value;
-  const data = { rating: rating, note: note };
+  const data = { rating: rating, note: note, quay: quay };
   fetch(scriptURL, {
     method: 'POST',
     body: JSON.stringify(data),
