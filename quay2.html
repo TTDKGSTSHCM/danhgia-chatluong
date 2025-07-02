@@ -25,15 +25,16 @@
       width: 100vw;
     }
     .logo-center img {
-      max-width: 97vw;
-      width: auto;
+      max-width: 400px; /* Bằng chiều rộng khung card form-section */
+      width: 100%;
       height: auto;
-      max-height: 110px;
+      max-height: 130px;
       display: block;
       margin: 0 auto;
       box-shadow: 0 4px 32px #c9e3fa18;
       border-radius: 12px;
       background: transparent;
+      object-fit: contain;
     }
     .rating-title {
       margin-top: 16px;
@@ -113,7 +114,7 @@
     }
     @media (max-width: 600px) {
       .form-section { padding: 16px 4vw 12px 4vw; }
-      .logo-center img{max-width:99vw;max-height:69px;}
+      .logo-center img{max-width:98vw;max-height:74px;}
     }
   </style>
 </head>
@@ -178,9 +179,10 @@ function submitRating() {
 function closeTab() {
   window.close();
   setTimeout(function() {
-    document.body.innerHTML = '<div style=\"text-align:center;padding:70px 24px;font-size:1.25rem;\">Quý khách vui lòng bấm nút X hoặc phím home để thoát khỏi trang này.<br><br>Cảm ơn quý khách đã đánh giá!</div>';
+    document.body.innerHTML = '<div style="text-align:center;padding:70px 24px;font-size:1.25rem;">Quý khách vui lòng bấm nút X hoặc phím home để thoát khỏi trang này.<br><br>Cảm ơn quý khách đã đánh giá!</div>';
   }, 200);
 }
 </script>
+
 </body>
 </html>
