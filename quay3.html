@@ -16,62 +16,84 @@
       position: relative;
       overflow-x: hidden;
     }
-    .bg-logo {
-      position: fixed;
-      left: 50%;
-      top: 50%;
-      transform: translate(-50%, -50%);
-      z-index: 0;
-      width: 55vw;
-      max-width: 410px;
-      min-width: 210px;
-      opacity: 0.12;
-      filter: blur(2.5px) grayscale(20%);
-      pointer-events: none;
+    .nrast-header {
+      width: 95vw;
+      max-width: 400px;
+      margin: 0 auto;
+      padding-top: 30px;
+      padding-bottom: 28px;
+      display: flex;
+      flex-direction: column;
+      align-items: stretch;
+      background: transparent;
+    }
+    .nrast-row {
+      display: flex;
+      flex-direction: row;
+      align-items: flex-start;
+      justify-content: stretch;
+    }
+    .nrast-abbr {
+      font-family: 'Times New Roman', serif;
+      color: #497fd0;
+      font-size: 2.7rem;
+      font-weight: 700;
+      letter-spacing: 1.6px;
+      line-height: 1.05;
+      min-width: 102px;
+      padding-right: 8px;
+      text-align: right;
       user-select: none;
     }
-    .header-custom {
-      width: 100%;
+    .nrast-divider {
+      border-left: 6px solid #497fd0;
+      height: 104px;
+      margin: 0 13px 0 4px;
+      border-radius: 2px;
+      flex-shrink: 0;
+    }
+    .nrast-en-block {
       display: flex;
       flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      padding: 24px 10px 16px 10px;
-      z-index: 1;
-      gap: 6px;
+      align-items: flex-start;
+      flex: 1 1 0%;
+      margin-top: 0.14em;
     }
-    .abbr-left {
-      font-weight: bold;
-      color: #1976d2;
-      font-size: 2.3rem;
-      letter-spacing: 1.2px;
+    .nrast-en {
+      color: #111;
+      font-size: 1.3rem;
       font-family: 'Arial Black', Arial, sans-serif;
-      line-height: 1.1;
-      text-shadow: 1px 1px 2px #fff8;
-      text-align: center;
+      font-weight: 900;
+      line-height: 1.15;
+      letter-spacing: 0.03em;
+      text-align: left;
+      margin-bottom: 0px;
+      word-break: break-word;
+      white-space: pre-line;
     }
-    .center-info {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      margin-left: 0;
-      text-align: center;
-    }
-    .center-title-vi {
+    .nrast-vi {
+      color: #c26619;
+      font-size: 1.3rem;
+      font-family: Arial, sans-serif;
       font-weight: bold;
-      color: #424242;
-      font-size: 1.08rem;
-      letter-spacing: 0.3px;
+      line-height: 1.15;
+      letter-spacing: 0.02em;
+      margin-top: 18px;
       text-align: center;
+      word-break: break-word;
+      white-space: pre-line;
+      width: 100%;
+      align-self: center;
     }
-    .center-title-en {
-      color: #757575;
-      font-size: 1.02rem;
-      font-weight: 500;
-      text-align: center;
+    @media (max-width: 600px) {
+      .nrast-header{max-width:98vw;padding-top:15px;padding-bottom:8px;}
+      .nrast-abbr{font-size:1.17rem;min-width:46px;}
+      .nrast-divider{height:44px;margin:0 6px 0 2px;}
+      .nrast-en{font-size:0.86rem;}
+      .nrast-vi{font-size:0.95rem;margin-top:9px;}
     }
     .rating-title {
-      margin-top: 20px;
+      margin-top: 16px;
       font-size: 1.4rem;
       font-weight: 600;
       color: #333;
@@ -146,25 +168,18 @@
       font-weight: 600;
       display: none;
     }
-    @media (max-width: 600px) {
-      .form-section { padding: 16px 4vw 12px 4vw; }
-      .header-custom {padding: 16px 2vw 8px 2vw;}
-      .abbr-left{font-size:1.3rem;}
-      .center-title-vi, .center-title-en{font-size:0.95rem;}
-      .rating-title{font-size:1.1rem;}
-      .star{font-size:34px;}
-      .bg-logo{width:80vw;max-width:370px;}
-    }
   </style>
 </head>
 <body>
-  <img src="Logo.jpg" alt="Logo" class="bg-logo">
-  <div class="header-custom">
-    <div class="abbr-left">NRAST</div>
-    <div class="center-info">
-      <div class="center-title-vi">TRUNG TÂM ĐĂNG KÝ GIAO DỊCH TÀI SẢN TẠI TP.HCM</div>
-      <div class="center-title-en">HCMC ASSET REGISTRATION CENTER</div>
+  <div class="nrast-header">
+    <div class="nrast-row">
+      <span class="nrast-abbr">NRAST</span>
+      <span class="nrast-divider"></span>
+      <span class="nrast-en-block">
+        <span class="nrast-en">Ho Chi Minh City<br>Registration Center for<br>Secured Transactions</span>
+      </span>
     </div>
+    <span class="nrast-vi">TRUNG TÂM ĐĂNG KÝ GIAO DỊCH,<br>TÀI SẢN TẠI TP.HCM</span>
   </div>
 
   <div class="form-section">
@@ -181,10 +196,9 @@
     <div id="message" class="mt-3"></div>
     <button id="closeBtn" class="btn-close-custom w-100" onclick="closeTab()">Đóng lại</button>
   </div>
-
 <script>
-const scriptURL = 'https://script.google.com/macros/s/AKfycbwNi5t08gZzKPmZRMUGwgFtkHN4WjsaaLXsFankTSVWExJ7hHZ1Ql1b4R-Rl0oKNCe_/exec';
-const quay = 'Quầy 3'; // Chỉ để gửi về database, không hiển thị
+const scriptURL = 'https://script.google.com/macros/s/AKfycbyPUAMYOg6W4mPeD6qxFLbDHEwoa1IRyow9bQDnfAF2PpF7Et9z7xrj1sfR_oQcG4K8/exec';
+const quay = 'Quầy 3';
 let rating = 0;
 function setRating(stars) {
   rating = stars;
@@ -198,10 +212,13 @@ function submitRating() {
     return;
   }
   const note = document.getElementById('note').value;
-  const data = { rating: rating, note: note, quay: quay };
+  const data = new URLSearchParams();
+  data.append('quay', quay);
+  data.append('rating', rating);
+  data.append('note', note);
   fetch(scriptURL, {
     method: 'POST',
-    body: JSON.stringify(data),
+    body: data,
     mode: 'no-cors'
   })
   .then(() => {
@@ -220,6 +237,9 @@ function submitRating() {
 }
 function closeTab() {
   window.close();
+  setTimeout(function() {
+    document.body.innerHTML = '<div style="text-align:center;padding:70px 24px;font-size:1.25rem;">Quý khách vui lòng bấm nút X hoặc phím home để thoát khỏi trang này.<br><br>Cảm ơn quý khách đã đánh giá!</div>';
+  }, 200);
 }
 </script>
 
