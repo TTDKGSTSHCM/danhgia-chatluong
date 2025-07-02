@@ -35,7 +35,7 @@
     }
     .nrast-abbr {
       font-family: 'Times New Roman', serif;
-      color: #497fd0;
+      color: #003366;
       font-size: 2.7rem;
       font-weight: 700;
       letter-spacing: 1.6px;
@@ -46,7 +46,7 @@
       user-select: none;
     }
     .nrast-divider {
-      border-left: 6px solid #497fd0;
+      border-left: 6px solid #003366;
       height: 104px;
       margin: 0 13px 0 4px;
       border-radius: 2px;
@@ -60,7 +60,7 @@
       margin-top: 0.14em;
     }
     .nrast-en {
-      color: #111;
+      color: #000000;
       font-size: 1.3rem;
       font-family: 'Arial Black', Arial, sans-serif;
       font-weight: 900;
@@ -72,7 +72,7 @@
       white-space: pre-line;
     }
     .nrast-vi {
-      color: #c26619;
+      color: #C00000;
       font-size: 1.3rem;
       font-family: Arial, sans-serif;
       font-weight: bold;
@@ -238,9 +238,10 @@ function submitRating() {
 function closeTab() {
   window.close();
   setTimeout(function() {
-    document.body.innerHTML = '<div style=\"text-align:center;padding:70px 24px;font-size:1.25rem;\">Quý khách vui lòng bấm nút X hoặc phím home để thoát khỏi trang này.<br><br>Cảm ơn quý khách đã đánh giá!</div>';
+    document.body.innerHTML = '<div style="text-align:center;padding:70px 24px;font-size:1.25rem;">Quý khách vui lòng bấm nút X hoặc phím home để thoát khỏi trang này.<br><br>Cảm ơn quý khách đã đánh giá!</div>';
   }, 200);
 }
 </script>
+
 </body>
 </html>
