@@ -30,7 +30,7 @@
     .nrast-row {
       display: flex;
       flex-direction: row;
-      align-items: flex-start;
+      align-items: center; /* canh giữa dọc NRAST và thanh | */
       justify-content: stretch;
     }
     .nrast-abbr {
@@ -238,10 +238,9 @@ function submitRating() {
 function closeTab() {
   window.close();
   setTimeout(function() {
-    document.body.innerHTML = '<div style="text-align:center;padding:70px 24px;font-size:1.25rem;">Quý khách vui lòng bấm nút X hoặc phím home để thoát khỏi trang này.<br><br>Cảm ơn quý khách đã đánh giá!</div>';
+    document.body.innerHTML = '<div style=\"text-align:center;padding:70px 24px;font-size:1.25rem;\">Quý khách vui lòng bấm nút X hoặc phím home để thoát khỏi trang này.<br><br>Cảm ơn quý khách đã đánh giá!</div>';
   }, 200);
 }
 </script>
-
 </body>
 </html>
