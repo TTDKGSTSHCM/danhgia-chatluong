@@ -16,59 +16,48 @@
       position: relative;
       overflow-x: hidden;
     }
-    .bg-logo {
-      position: fixed;
-      left: 50%;
-      top: 50%;
-      transform: translate(-50%, -50%);
-      z-index: 0;
-      width: 62vw;
-      max-width: 470px;
-      min-width: 220px;
-      opacity: 0.20;
-      filter: blur(1.1px) grayscale(8%);
-      pointer-events: none;
-      user-select: none;
-    }
-    .header-custom {
-      width: 100%;
+    .header-tia {
       display: flex;
-      flex-direction: column;
       align-items: center;
       justify-content: center;
-      padding: 24px 10px 16px 10px;
-      z-index: 1;
-      gap: 6px;
+      gap: 2px;
+      padding: 24px 0 16px 0;
+      max-width: 700px;
+      margin: 0 auto 6px auto;
     }
-    .abbr-left {
-      font-weight: bold;
-      color: #1976d2;
-      font-size: 2.3rem;
-      letter-spacing: 1.2px;
+    .header-logo {
       font-family: 'Arial Black', Arial, sans-serif;
-      line-height: 1.1;
-      text-shadow: 1px 1px 2px #fff8;
-      text-align: center;
+      color: #1976d2;
+      font-size: 2.15rem;
+      letter-spacing: 2.5px;
+      font-weight: bold;
+      min-width: 84px;
+      text-align: right;
     }
-    .center-info {
+    .header-divider {
+      border-left: 3px solid #181818;
+      height: 54px;
+      opacity: 0.96;
+      margin: 0 1px;
+    }
+    .header-text-block {
       display: flex;
       flex-direction: column;
-      align-items: center;
-      margin-left: 0;
-      text-align: center;
+      justify-content: center;
     }
-    .center-title-vi {
+    .header-en {
+      font-size: 1.19rem;
       font-weight: bold;
-      color: #424242;
-      font-size: 1.08rem;
-      letter-spacing: 0.3px;
-      text-align: center;
+      color: #222;
+      text-transform: uppercase;
+      letter-spacing: 0.2px;
     }
-    .center-title-en {
-      color: #757575;
-      font-size: 1.02rem;
-      font-weight: 500;
-      text-align: center;
+    .header-vi {
+      font-size: 1.04rem;
+      font-weight: bold;
+      color: #3454a4;
+      letter-spacing: 0.5px;
+      margin-top: 1px;
     }
     .rating-title {
       margin-top: 20px;
@@ -148,23 +137,22 @@
     }
     @media (max-width: 600px) {
       .form-section { padding: 16px 4vw 12px 4vw; }
-      .header-custom {padding: 16px 2vw 8px 2vw;}
-      .abbr-left{font-size:1.3rem;}
-      .center-title-vi, .center-title-en{font-size:0.95rem;}
-      .rating-title{font-size:1.1rem;}
-      .star{font-size:34px;}
-      .bg-logo{width:85vw;max-width:380px;}
+      .header-tia {gap:1px;max-width:99vw;padding:11px 0 5px 0;}
+      .header-logo{font-size:1.06rem;min-width:34px;}
+      .header-divider{height:25px;margin:0 1px;}
+      .header-en{font-size:0.92rem;}
+      .header-vi{font-size:0.85rem;}
     }
   </style>
 </head>
 <body>
-  <img src="Logo.jpg" alt="Logo" class="bg-logo">
-  <div class="header-custom">
-    <div class="abbr-left">NRAST</div>
-    <div class="center-info">
-      <div class="center-title-vi">TRUNG TÂM ĐĂNG KÝ GIAO DỊCH TÀI SẢN TẠI TP.HCM</div>
-      <div class="center-title-en">HCMC ASSET REGISTRATION CENTER</div>
-    </div>
+  <div class="header-tia">
+    <span class="header-logo">NRAST</span>
+    <span class="header-divider"></span>
+    <span class="header-text-block">
+      <span class="header-en">HCMC ASSET REGISTRATION CENTER</span>
+      <span class="header-vi">TRUNG TÂM ĐĂNG KÝ GIAO DỊCH TÀI SẢN TẠI TP.HCM</span>
+    </span>
   </div>
 
   <div class="form-section">
@@ -183,7 +171,7 @@
   </div>
 
 <script>
-const scriptURL = 'https://script.google.com/macros/s/AKfycbwydNheXEw06-PjZIxnocUHXQFJHbm5JGnnba-lYOIau7HFUTaFr8R5o46fSdFGpdMV/exec';
+const scriptURL = 'https://script.google.com/macros/s/AKfycbyPUAMYOg6W4mPeD6qxFLbDHEwoa1IRyow9bQDnfAF2PpF7Et9z7xrj1sfR_oQcG4K8/exec';
 const quay = 'Quầy 1';
 let rating = 0;
 function setRating(stars) {
