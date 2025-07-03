@@ -88,21 +88,23 @@
       align-self: center;
       display: block;
     }
+    /* Mobile fix: Giữ cụm logo - divider - tiếng Anh ngang, nhỏ lại, không bị rớt dòng */
     @media (max-width: 600px) {
       .logo-center-container{max-width:98vw;padding-top:14px;}
       .nrast-row {
-        flex-direction: column;
+        flex-direction: row;
         align-items: center;
         justify-content: center;
         margin-bottom: 7px;
+        flex-wrap: wrap;
       }
-      .nrast-abbr{font-size:1.17rem;min-width:40px;padding-right:0;text-align:center;}
-      .nrast-divider{height:28px;margin:4px 0;}
-      .nrast-en-block{align-items:center;}
-      .nrast-en{font-size:0.87rem;text-align:center;}
-      .nrast-vi{font-size:0.95rem;margin-top:7px;}
+      .nrast-abbr{font-size:1.07rem;min-width:36px;padding-right:0;text-align:right;}
+      .nrast-divider{height:28px;margin:0 7px;}
+      .nrast-en-block{align-items:flex-start; max-width: 132px;}
+      .nrast-en{font-size:0.82rem;text-align:left;}
+      .nrast-vi{font-size:0.93rem;margin-top:7px;}
     }
-    /* Giữ lại phần đánh giá như cũ */
+    /* Phần đánh giá giữ nguyên */
     .rating-title {
       margin-top: 16px;
       font-size: 1.4rem;
