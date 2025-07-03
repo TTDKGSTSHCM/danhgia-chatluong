@@ -16,50 +16,40 @@
       position: relative;
       overflow-x: hidden;
     }
-    .nrast-header {
-      width: 95vw;
-      max-width: 400px;
-      margin: 0 auto;
-      padding-top: 30px;
-      padding-bottom: 28px;
+    .logo-center-container {
       display: flex;
       flex-direction: column;
-      align-items: center; /* luôn canh giữa */
-      background: transparent;
+      align-items: center;
+      width: 100%;
+      margin: 0 auto 0 auto;
+      padding-top: 30px;
+      padding-bottom: 0;
+      max-width: 400px;
     }
     .nrast-row {
       display: flex;
       flex-direction: row;
       align-items: center;
-      justify-content: center; /* luôn canh giữa ngang */
+      justify-content: center;
+      width: 100%;
       margin-bottom: 12px;
     }
     .nrast-abbr {
       font-family: 'Times New Roman', serif;
       color: #003366;
-      font-size: 2.7rem;
+      font-size: 2.2rem;
       font-weight: 700;
-      letter-spacing: 1.6px;
-      line-height: 1.05;
-      min-width: 102px;
+      letter-spacing: 1.2px;
+      line-height: 1.08;
+      min-width: 90px;
       padding-right: 8px;
       text-align: right;
       user-select: none;
-    }
-    .nrast-abbr .dot-red {
-      position: absolute;
-      left: 0.53em;
-      top: -0.37em;
-      width: 0.27em;
-      height: 0.27em;
-      background: #C00000;
-      border-radius: 50%;
       display: inline-block;
-      z-index: 2;
     }
     .nrast-divider {
       border-left: 6px solid #003366;
-      height: 104px;
+      height: 64px;
       margin: 0 13px 0 4px;
       border-radius: 2px;
       flex-shrink: 0;
@@ -68,54 +58,51 @@
       display: flex;
       flex-direction: column;
       align-items: flex-start;
-      flex: 1 1 0%;
       margin-top: 0.14em;
     }
     .nrast-en {
       color: #000000;
-      font-size: 1.3rem;
+      font-size: 1.1rem;
       font-family: 'Arial Black', Arial, sans-serif;
       font-weight: 900;
-      line-height: 1.15;
-      letter-spacing: 0.03em;
+      line-height: 1.12;
+      letter-spacing: 0.01em;
       text-align: left;
       margin-bottom: 0px;
       word-break: break-word;
       white-space: pre-line;
+      display: block;
     }
     .nrast-vi {
       color: #C00000;
-      font-size: 1.3rem;
+      font-size: 1.18rem;
       font-family: Arial, sans-serif;
       font-weight: bold;
-      line-height: 1.15;
-      letter-spacing: 0.02em;
-      margin-top: 18px;
+      line-height: 1.14;
+      letter-spacing: 0.01em;
+      margin-top: 13px;
       text-align: center;
       word-break: break-word;
       white-space: pre-line;
       width: 100%;
       align-self: center;
+      display: block;
     }
     @media (max-width: 600px) {
-      .nrast-header { max-width: 98vw; padding-top: 15px; padding-bottom: 8px;}
+      .logo-center-container{max-width:98vw;padding-top:14px;}
       .nrast-row {
         flex-direction: column;
         align-items: center;
         justify-content: center;
         margin-bottom: 7px;
       }
-      .nrast-abbr{font-size:1.3rem;min-width:unset;padding-right:0;text-align:center;}
-      .nrast-divider{height:26px;margin:4px 0;}
+      .nrast-abbr{font-size:1.17rem;min-width:40px;padding-right:0;text-align:center;}
+      .nrast-divider{height:28px;margin:4px 0;}
       .nrast-en-block{align-items:center;}
-      .nrast-en{font-size:0.95rem;text-align:center;}
-      .nrast-abbr .dot-red {
-        left: 0.36em;
-        top: -0.32em;
-        width: 0.17em;
-        height: 0.17em;
-      }
+      .nrast-en{font-size:0.87rem;text-align:center;}
+      .nrast-vi{font-size:0.95rem;margin-top:7px;}
     }
+    /* Giữ lại phần đánh giá như cũ */
     .rating-title {
       margin-top: 16px;
       font-size: 1.4rem;
@@ -196,13 +183,9 @@
   </style>
 </head>
 <body>
-  <div class="nrast-header">
+  <div class="logo-center-container">
     <div class="nrast-row">
-      <span class="nrast-abbr">
-        Ros<span style="position:relative;display:inline-block;">
-          i<span class="dot-red"></span>
-        </span>AI
-      </span>
+      <span class="nrast-abbr">RosiAI</span>
       <span class="nrast-divider"></span>
       <span class="nrast-en-block">
         <span class="nrast-en">State Compensation & <br>Secured Transactions<br>Expert</span>
