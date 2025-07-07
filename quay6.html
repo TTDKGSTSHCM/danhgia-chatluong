@@ -16,39 +16,42 @@
       position: relative;
       overflow-x: hidden;
     }
-    .nrast-header {
-      width: 95vw;
-      max-width: 400px;
-      margin: 0 auto;
-      padding-top: 30px;
-      padding-bottom: 28px;
+    .logo-center-container {
       display: flex;
       flex-direction: column;
-      align-items: stretch;
-      background: transparent;
+      align-items: center;
+      width: 100%;
+      margin: 0 auto 0 auto;
+      padding-top: 18px;
+      padding-bottom: 0;
+      max-width: 430px;
     }
     .nrast-row {
-      display: flex;
-      flex-direction: row;
+      display: inline-flex;
       align-items: center;
-      justify-content: stretch;
+      justify-content: center;
+      width: auto;
+      margin-bottom: 12px;
+      flex-wrap: wrap;
     }
     .nrast-abbr {
       font-family: 'Times New Roman', serif;
       color: #003366;
-      font-size: 2.4rem;
+      font-size: 2rem;
       font-weight: 700;
-      letter-spacing: 1.3px;
-      line-height: 1.05;
-      min-width: 90px;
-      padding-right: 8px;
+      letter-spacing: 1.1px;
+      line-height: 1.08;
+      min-width: unset;
       text-align: right;
       user-select: none;
+      display: inline-block;
+      margin-right: 8px;
+      white-space: nowrap;
     }
     .nrast-divider {
-      border-left: 6px solid #003366;
-      height: 104px;
-      margin: 0 13px 0 4px;
+      border-left: 5px solid #003366;
+      height: 45px;
+      margin: 0 8px;
       border-radius: 2px;
       flex-shrink: 0;
     }
@@ -56,42 +59,42 @@
       display: flex;
       flex-direction: column;
       align-items: flex-start;
-      flex: 1 1 0%;
-      margin-top: 0.14em;
+      max-width: 180px;
+      min-width: 90px;
     }
     .nrast-en {
-      color: #000000;
-      font-size: 1.05rem;
+      color: #003366;
+      font-size: 0.89rem;
       font-family: 'Arial Black', Arial, sans-serif;
-      font-weight: 900;
-      line-height: 1.08;
+      font-weight: 800;
+      line-height: 1.13;
       letter-spacing: 0.01em;
       text-align: left;
       margin-bottom: 0px;
       word-break: break-word;
-      white-space: pre-line;
-      margin-top: 0;
+      white-space: normal;
+      display: block;
     }
     .nrast-vi {
       color: #C00000;
-      font-size: 1.3rem;
+      font-size: 1.11rem;
       font-family: Arial, sans-serif;
       font-weight: bold;
-      line-height: 1.15;
-      letter-spacing: 0.02em;
-      margin-top: 18px;
+      line-height: 1.14;
+      letter-spacing: 0.01em;
+      margin-top: 12px;
       text-align: center;
       word-break: break-word;
       white-space: pre-line;
       width: 100%;
       align-self: center;
+      display: block;
     }
-    @media (max-width: 600px) {
-      .nrast-header{max-width:98vw;padding-top:15px;padding-bottom:8px;}
-      .nrast-abbr{font-size:1.1rem;min-width:40px;}
-      .nrast-divider{height:44px;margin:0 6px 0 2px;}
-      .nrast-en{font-size:0.74rem;}
-      .nrast-vi{font-size:0.95rem;margin-top:9px;}
+    @media (max-width: 420px) {
+      .nrast-abbr {font-size: 1.01rem;}
+      .nrast-divider {height: 22px;}
+      .nrast-en-block {max-width: 92vw;min-width: 50px;}
+      .nrast-en {font-size:0.67rem;line-height:1.11;}
     }
     .rating-title {
       margin-top: 16px;
@@ -173,15 +176,15 @@
   </style>
 </head>
 <body>
-  <div class="nrast-header">
+  <div class="logo-center-container">
     <div class="nrast-row">
       <span class="nrast-abbr">RosiAI</span>
       <span class="nrast-divider"></span>
       <span class="nrast-en-block">
         <span class="nrast-en">
-          State Compensation &<br>
-          Secured Transactions<br>
-          Expert
+          Ho Chi Minh City Center<br>
+          For Property And<br>
+          Transaction Registration
         </span>
       </span>
     </div>
@@ -208,7 +211,7 @@
   </div>
 <script>
 const scriptURL = 'https://script.google.com/macros/s/AKfycbyPUAMYOg6W4mPeD6qxFLbDHEwoa1IRyow9bQDnfAF2PpF7Et9z7xrj1sfR_oQcG4K8/exec';
-const quay = 'Quầy 6';
+const quay = 'Quầy 6'; // Đổi số quầy cho từng file quayN.html
 let rating = 0;
 let autoResetTimeout = null;
 
