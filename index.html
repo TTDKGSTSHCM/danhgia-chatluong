@@ -110,11 +110,8 @@
       </form>
     </div>
   </div>
-
-  <!-- Có thể đặt logo hoặc gì đó ở nền nếu muốn -->
-
   <script>
-    // Bấm chọn quầy nào thì radio đó nổi lên
+    // Hiệu ứng chọn radio
     document.querySelectorAll('.popup-radio-item').forEach(label => {
       label.addEventListener('click', () => {
         document.querySelectorAll('.popup-radio-item').forEach(lab => lab.classList.remove('selected'));
